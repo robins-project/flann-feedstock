@@ -23,7 +23,7 @@ build:
 
 requirements:
     build:
-        - {{ compiler('cxx') }}
+        # - {{ compiler('cxx') }}
         - cmake
         - ninja
         - python
