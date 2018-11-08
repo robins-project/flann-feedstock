@@ -23,15 +23,16 @@ build:
 
 requirements:
     build:
+        # - {{ compiler('c') }}
         # - {{ compiler('cxx') }}
         - cmake
         - ninja
         - python
     host:
-        - hdf5
+        - hdf5 {{ hdf5 }}
         - gtest
     run:
-        - hdf5
+        - hdf5 {{ hdf5 }}
         - feature_blas {{ feature_blas }} {{ blas_impl }}
         - feature_cuda {{ feature_cuda }} {{ cuda_impl }}
 
